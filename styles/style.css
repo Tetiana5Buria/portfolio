@@ -777,18 +777,12 @@ footer {
 
     .nav-links {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 30px;
-        background: #2a2d37;
-        width: 200px;
-        padding: 15px;
-        border-radius: 10px;
     }
 
     .nav-links.active {
         display: flex;
+        /* або block — залежно від твого макету */
+        flex-direction: column;
     }
 
     .burger {
