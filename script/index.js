@@ -1,10 +1,20 @@
-/* burger-menu */
 document.addEventListener("DOMContentLoaded", () => {
   const burger = document.getElementById("burger");
   const navLinks = document.getElementById("navLinks");
 
-  burger.addEventListener("click", () => {
+  // Відкриття/закриття меню
+  burger.addEventListener("click", (e) => {
+    e.stopPropagation(); // щоб не закривалося одразу
     navLinks.classList.toggle("active");
+  });
+
+  // Закриття меню при кліку поза меню або бургером
+  document.addEventListener("click", (e) => {
+    const clickedOutside =
+      !navLinks.contains(e.target) && !burger.contains(e.target);
+    if (clickedOutside) {
+      navLinks.classList.remove("active");
+    }
   });
 });
 
