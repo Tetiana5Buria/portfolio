@@ -22,6 +22,15 @@ span {
 }
 
 /* Navigation Bar */
+.burger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    color: #0ef;
+    border: none;
+    cursor: pointer;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -771,7 +780,30 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #2a2d37;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 
     .intro h1,
     .intro h2 {

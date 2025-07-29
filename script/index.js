@@ -1,3 +1,13 @@
+/* burger-menu */
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.getElementById("burger");
+  const navLinks = document.getElementById("navLinks");
+
+  burger.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
+});
+
 /* skills */
 window.addEventListener("scroll", function () {
   const skillsSection = document.getElementById("Skills");
