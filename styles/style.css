@@ -24,19 +24,22 @@ span {
 /* Navigation Bar */
 .burger {
     display: none;
-    font-size: 30px;
-    background: none;
-    color: #0ef;
-    border: none;
-    cursor: pointer;
+
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    background: #0ef;
+    border-radius: 5px;
 }
 
 nav {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    margin: 20px 0;
     background: rgba(42, 45, 55, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 238, 255, 0.1);
@@ -44,9 +47,25 @@ nav {
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    border: #0ef 2px solid;
+
+}
+
+.nav-links {
+    display: flex;
+    /* ключове! */
+    gap: 20px;
+    list-style: none;
+}
+
+/* Навігаційні елементи */
+.nav-links li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 nav img {
@@ -755,6 +774,38 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background: #2a2d37;
+        width: 200px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .burger span {
+        width: 25px;
+        height: 3px;
+        background: #0ef;
+        border-radius: 3px;
+    }
+
+
     nav {
         flex-direction: column;
         gap: 15px;
@@ -780,30 +831,8 @@ footer {
     }
 }
 
+
 @media (max-width: 680px) {
-    .burger {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #2a2d37;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
 
     .intro h1,
     .intro h2 {
