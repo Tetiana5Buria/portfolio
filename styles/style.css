@@ -8,12 +8,11 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(180deg, #1a1c22 0%, #252730 100%);
     overflow-x: hidden;
 }
 
 .box {
-    padding: 40px;
+    padding: 0px;
 
 }
 
@@ -47,6 +46,7 @@ nav {
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
+    border: #0ef 2px solid;
 
 }
 
@@ -155,7 +155,7 @@ hr {
 }
 
 .intro p {
-    font-size: 1.5rem;
+    font-size: 24px;
     color: #a0a0a0;
     line-height: 1.6;
     opacity: 0;
@@ -389,7 +389,6 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: -30px;
     text-decoration: none;
     opacity: 0;
     animation-delay: 2s;
@@ -465,7 +464,7 @@ hr {
 }
 
 .project-item-box p {
-    width: 80%;
+    width: 40%;
     font-size: 16px;
     color: #e0e0e0;
     text-align: center;
@@ -774,6 +773,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .intro {
+
+        margin-left: 0px;
+    }
 
     .nav-links {
         display: none;
@@ -781,7 +784,6 @@ footer {
 
     .nav-links.active {
         display: flex;
-        /* або block — залежно від твого макету */
         flex-direction: column;
     }
 
@@ -828,24 +830,140 @@ footer {
 
 @media (max-width: 680px) {
 
+    nav {
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+
+    nav img {
+        width: 90px;
+        height: 45px;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+    }
+
+    .nav-links.active {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .intro {
+        padding: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+
     .intro h1,
     .intro h2 {
-        font-size: 2rem;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 1px;
     }
 
     .intro p {
-        font-size: 1.2rem;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .item_box {
+        gap: 15px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
     }
 
     .photo-container {
-        height: 50vh;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+
+    .photo {
+        width: 100%;
+        height: auto;
+    }
+
+    .container,
+    .container__about-me {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .about_me {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .about_me h2,
+    .about_projects h3,
+    .about_achievements h3,
+    .about_skills h3,
+    .footer-box h3 {
+        font-size: 1.6rem;
+    }
+
+    .about_me p {
+        font-size: 18px;
+        padding: 0 5px;
+    }
+
+    .about_me-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .cards {
+        height: 250px;
+    }
+
+    .project-item-box p {
+        width: 80%;
+        font-size: 14px;
     }
 
     .footer-box {
-        padding: 40px 20px;
+        padding: 30px 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .footer-icons {
+        width: 28px;
+        height: 28px;
+    }
+
+    .social-link {
+        width: 50px;
+        height: 50px;
     }
 }
