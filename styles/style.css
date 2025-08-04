@@ -245,7 +245,7 @@ hr {
 
 
 .photo-container {
-    width: 30%;
+    width: 40%;
     height: 70vh;
     border-radius: 10%;
     overflow: hidden;
@@ -269,11 +269,6 @@ hr {
 .photo-container::before {
     content: "";
     position: absolute;
-    top: -20%;
-    left: -20%;
-    width: 140%;
-    height: 140%;
-
     filter: blur(25px) brightness(0.4);
     z-index: -1;
     opacity: 0.5;
@@ -346,9 +341,9 @@ hr {
 .about_me p {
     font-size: 26px;
     color: #a0a0a0;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    text-align: justify;
+    line-height: 1.3;
+
 }
 
 .about_me-cards {
@@ -534,7 +529,7 @@ hr {
 
 .achievements-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
 }
@@ -553,33 +548,45 @@ hr {
     box-shadow: 0 15px 30px rgba(0, 238, 255, 0.2);
 }
 
-.achievement-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 20px;
-}
+
 
 .achievement-icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(80%);
     transition: transform 0.3s ease;
+    background: linear-gradient(135deg, rgba(0, 238, 255, 0.4), rgba(58, 62, 74, 0.6));
 }
 
-.achievement-item:hover .achievement-icon img {
+.achievement-icon img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 238, 255, 0.1), rgba(0, 238, 255, 0.3));
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.achievement-icon img:hover::before {
+    opacity: 0.8;
+}
+
+.achievement-item:hover {
     transform: scale(1.1);
 }
 
 .achievement-item h4 {
-    font-size: 1.4rem;
+    font-size: 16px;
     font-weight: 600;
     color: #ffffff;
     margin: 0 0 15px;
 }
 
 .achievement-item p {
-    font-size: 1rem;
+    font-size: 14px;
     color: #a0a0a0;
     line-height: 1.6;
 }
@@ -846,8 +853,7 @@ footer {
     }
 
     nav img {
-        width: 90px;
-        height: 45px;
+        display: none;
     }
 
     .burger {
@@ -935,6 +941,12 @@ footer {
     .about_projects,
     .about_achievements {
         padding: 5px;
+    }
+
+    .achievements-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 20px;
     }
 
     .projects-container {
