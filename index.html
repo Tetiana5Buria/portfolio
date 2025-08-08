@@ -7,6 +7,9 @@
     <title>Tetiana Buria - Frontend Developer Portfolio</title>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -19,7 +22,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <ul class="nav-links" id="navLinks">
+                <ul class="nav-links  reveal reveal-right" id="navLinks">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About me</a></li>
                     <li><a href="#achievements">Achievements</a></li>
@@ -33,11 +36,11 @@
         <main>
             <section id="home">
                 <div class="container">
-                    <div class="intro">
+                    <div class="intro reveal reveal-top">
                         <h1>Hello, I'm</h1>
                         <h2><span>Tetiana Buria</span></h2>
                         <p> Frontend <span>Developer</span> </p>
-                        <div class="item_box">
+                        <div class="item_box reveal reveal-left">
                             <a href="#" class="btn">View Projects</a>
                             <div class="social-buttons">
                                 <a href="https://github.com/Tetiana5Buria" title="GitHub"><img src="./images/git.svg"
@@ -48,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="photo-container">
+                    <div class="photo-container reveal reveal-top">
                         <div class="photo">
                             <img src="./images/imagess.jpg" alt="Tetiana">
                         </div>
@@ -58,12 +61,12 @@
 
             <section id="about">
                 <div class="container__about-me">
-                    <div class="photo-container">
+                    <div class="photo-container reveal reveal-top">
                         <div class="about_me-cards">
-                            <img class="photo" src="./images/ADSC09987.jpg" alt="main">
+                            <img class="photo" id="AboutImage" src="./images/ADSC09987.jpg" alt="main">
                         </div>
                     </div>
-                    <div class="about_me">
+                    <div class="about_me reveal reveal-right">
                         <h2>About <span>me</span></h2>
                         <hr>
                         <p>
@@ -89,7 +92,7 @@
                     </h3>
                     <hr>
                     <div class="cards-fone">
-                        <div class="achievements-container">
+                        <div class="achievements-container reveal reveal-top">
                             <div class="achievement-item">
 
                                 <div class="achievement-icon">
@@ -124,7 +127,7 @@
                     <h3>My <span> projects</span></h3>
                     <hr>
                     <div class="cards-fone">
-                        <div class="projects-container">
+                        <div class="projects-container reveal reveal-right">
                             <a href="https://tetiana5buria.github.io/di-gi/" class="project-item-box">
                                 <div class="cards">
                                     <img src="./images/project1.png" alt="Project 1">
@@ -157,6 +160,7 @@
             <section id="skills">
                 <div class="about_skills">
                     <h3>My <span>skills</span></h3>
+                    <hr>
                     <div class="container1" id="Skills">
                         <h1 class="heading1">Technical Skills</h1>
                         <div class="Technical_bars">
@@ -206,20 +210,17 @@
                 </div>
             </section>
             <!-- achivments -->
-
-
         </main>
-
         <footer class="footer-box" id="contact">
             <h3 class="footer-title">Let's <span>Connect</span></h3>
             <hr class="footer-divider">
             <div class="footer-content">
                 <div class="contact-info">
                     <a href="mailto:poriniya@gmail.com" class="contact-link">
-                        <span class="contact-icon">✉</span> poriniya@gmail.com
+                        <span class="contact-icon">✉</span>buriatetiana2@gmail.com
                     </a>
                     <a href="tel:+380976454342" class="contact-link">
-                        <span class="contact-icon">✆</span> +380976454342
+                        <span class="contact-icon">✆</span>+380976454342
                     </a>
                 </div>
                 <form class="contact-form" id="contactForm">

@@ -2,19 +2,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const burger = document.getElementById("burger");
   const navLinks = document.getElementById("navLinks");
 
-  // Відкриття/закриття меню
+  /* burger */
   burger.addEventListener("click", (e) => {
-    e.stopPropagation(); // щоб не закривалося одразу
+    e.stopPropagation();
     navLinks.classList.toggle("active");
   });
 
-  // Закриття меню при кліку поза меню або бургером
   document.addEventListener("click", (e) => {
     const clickedOutside =
       !navLinks.contains(e.target) && !burger.contains(e.target);
     if (clickedOutside) {
       navLinks.classList.remove("active");
     }
+  });
+});
+
+/* about me */
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  reveals.forEach((el) => {
+    observer.observe(el);
   });
 });
 
@@ -32,8 +53,6 @@ window.addEventListener("scroll", function () {
       span.style.width = percent + "%";
       span.style.background = "linear-gradient(45deg, #272929, #0ef)";
     }
-
-    // Знімаємо слухач, щоб не запускати знову
     window.removeEventListener("scroll", arguments.callee);
   }
 });
