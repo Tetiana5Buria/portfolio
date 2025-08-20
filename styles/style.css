@@ -389,8 +389,7 @@ hr {
     box-shadow: 0 5px 15px rgba(0, 238, 255, 0.1);
     overflow: hidden;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
-    box-shadow: 0 0 10px rgb(5, 94, 100), 0 0 20px rgb(43, 198, 210),
-        0 0 30px rgb(57, 207, 218);
+    box-shadow: 0 0 10px rgb(5, 94, 100), 0 0 20px rgb(43, 198, 210), 0 0 30px rgb(57, 207, 218);
     margin-bottom: 20px;
 }
 
@@ -401,9 +400,7 @@ hr {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg,
-            rgba(0, 238, 255, 0.1),
-            rgba(0, 238, 255, 0.3));
+    background: linear-gradient(180deg, rgba(0, 238, 255, 0.1), rgba(0, 238, 255, 0.3));
     z-index: 1;
     transition: opacity 0.3s ease;
 }
@@ -476,8 +473,7 @@ hr {
     max-width: 80%;
     margin: 0 auto;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
-    box-shadow: 0 0 10px rgb(5, 94, 100), 0 0 20px rgb(43, 198, 210),
-        0 0 30px rgb(57, 207, 218);
+    box-shadow: 0 0 10px rgb(5, 94, 100), 0 0 20px rgb(43, 198, 210), 0 0 30px rgb(57, 207, 218);
 }
 
 .bar {
@@ -515,8 +511,7 @@ hr {
     border-radius: 10px;
 }
 
-/* achievements */
-
+/* Achievements */
 .achievements-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -542,9 +537,7 @@ hr {
     height: 100%;
     object-fit: contain;
     transition: transform 0.3s ease;
-    background: linear-gradient(135deg,
-            rgba(0, 238, 255, 0.4),
-            rgba(58, 62, 74, 0.6));
+    background: linear-gradient(135deg, rgba(0, 238, 255, 0.4), rgba(58, 62, 74, 0.6));
 }
 
 .achievement-icon img::before {
@@ -554,9 +547,7 @@ hr {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg,
-            rgba(0, 238, 255, 0.1),
-            rgba(0, 238, 255, 0.3));
+    background: linear-gradient(180deg, rgba(0, 238, 255, 0.1), rgba(0, 238, 255, 0.3));
     z-index: 1;
     transition: opacity 0.3s ease;
 }
@@ -744,53 +735,106 @@ hr {
     }
 }
 
+/* Media Queries */
+
+/* Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
     nav ul li {
-        font-size: 16px;
+        font-size: 20px;
+    }
+
+    nav img {
+        width: 100px;
+        height: 50px;
     }
 
     .container,
     .container__about-me {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
+        padding: 20px;
     }
 
-    .photo-container,
-    .photo,
-    .about_me {
+    .intro {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .intro h1,
+    .intro h2 {
+        font-size: 36px;
+    }
+
+    .intro p {
+        font-size: 20px;
+    }
+
+    .photo-container {
         width: 80%;
+        height: 60vh;
+        margin: 0 auto;
     }
 
     .photo {
-        width: 80%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .about_me {
+        width: 100%;
+    }
+
+    .about_me h2 {
+        font-size: 2rem;
+    }
+
+    .about_me p {
+        font-size: 22px;
     }
 
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        padding: 20px;
     }
 
     .achievements-container {
-
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        padding: 20px;
+    }
+
+    .cards {
+        height: 300px;
+    }
+
+    .Technical_bars {
+        max-width: 90%;
+    }
+
+    .footer-content {
+        gap: 30px;
+    }
+
+    .contact-info {
+        width: 40%;
+    }
+
+    .contact-form {
+        width: 55%;
+    }
+
+    .footer-grid {
+        width: 60%;
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
+/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
-    .intro {
-        margin-left: 0px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
+    nav {
+        padding: 10px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .burger {
@@ -798,131 +842,84 @@ hr {
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
+        z-index: 101;
     }
 
     .burger span {
-        width: 25px;
-        height: 3px;
+        width: 30px;
+        height: 4px;
         background: #0ef;
         border-radius: 3px;
     }
 
-    nav {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #2a2d37, #343742);
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 4px 15px rgba(0, 238, 255, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     nav ul {
         flex-direction: column;
-        align-items: center;
+        gap: 15px;
     }
 
-    .photo-container {
-        width: 100%;
-        height: 70vh;
-        border-radius: 10px;
-        margin: 0 auto;
-    }
-
-    .projects-container {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .achievements-container {
-
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-info,
-    .contact-form {
-        width: 100%;
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 680px) {
-    section {
-        padding: 5px;
-    }
-
-    nav {
-        flex-direction: column;
-        padding: 10px 15px;
+    nav ul li {
+        font-size: 22px;
     }
 
     nav img {
-        display: none;
-    }
-
-    .burger {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        cursor: pointer;
-    }
-
-    .nav-links.active {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        width: 90px;
+        height: 45px;
     }
 
     .intro {
-        padding: 10px;
         margin-left: 0;
-        text-align: center;
+        padding: 10px;
     }
 
     .intro h1,
     .intro h2 {
-        font-size: 20px;
-        font-weight: 600;
+        font-size: 28px;
         letter-spacing: 1px;
     }
 
     .intro p {
-        font-size: 16px;
-        line-height: 1.4;
-    }
-
-    .item_box {
-        gap: 15px;
+        font-size: 18px;
+        line-height: 1.5;
     }
 
     .btn {
-        padding: 10px 20px;
+        padding: 10px 25px;
         font-size: 16px;
     }
 
     .photo-container {
-        width: 100%;
-        height: 70vh;
-        border-radius: 10px;
+        width: 90%;
+        height: 90vh;
+        border-radius: 8px;
         margin: 0 auto;
     }
 
     .photo {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 
     .container,
     .container__about-me {
-        flex-direction: column;
-        padding: 5px;
-        gap: 10px;
+        padding: 15px;
+        gap: 20px;
     }
 
     .about_me {
@@ -930,66 +927,60 @@ hr {
         padding: 0 10px;
     }
 
-    .about_me h2,
-    .about_projects h3,
-    .about_achievements h3,
-    .about_skills h3,
-    .footer-box h3 {
-        font-size: 20px;
+    .about_me h2 {
+        font-size: 1.8rem;
     }
 
     .about_me p {
-        font-size: 18px;
-        padding: 0 5px;
+        font-size: 20px;
     }
 
     .about_me-cards {
         flex-direction: column;
         align-items: center;
-    }
-
-    .about_projects,
-    .about_achievements {
-        padding: 5px;
-    }
-
-    .achievements {
-        padding: 5px;
-
-    }
-
-    .achievements-container {
-        grid-template-columns: 1fr;
-        padding: 10px;
-        gap: 20px;
+        gap: 15px;
     }
 
     .projects-container {
         grid-template-columns: 1fr;
-        padding: 1px;
-        gap: 10px;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .achievements-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
     }
 
     .cards {
-        width: 100%;
         height: 250px;
     }
 
     .cards-fone {
-        padding: 5px;
+        padding: 15px;
     }
 
     .project-item-box p {
-        width: 80%;
+        width: 70%;
         font-size: 14px;
     }
 
     .Technical_bars {
-        max-width: 100%;
+        max-width: 95%;
+    }
+
+    .bar {
+        gap: 20px;
+    }
+
+    .progress_bar {
+        height: 15px;
+        margin-top: 20px;
     }
 
     .footer-box {
-        padding: 30px 15px;
+        padding: 40px 20px;
     }
 
     .footer-content {
@@ -1001,16 +992,29 @@ hr {
     .contact-info,
     .contact-form {
         width: 100%;
+        min-width: unset;
+    }
+
+    .contact-link {
+        font-size: 20px;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 12px;
+        font-size: 1rem;
     }
 
     .footer-grid {
-        grid-template-columns: 1fr;
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
-    .footer-icons {
-        width: 28px;
-        height: 28px;
+    .footer-grid> :nth-child(1),
+    .footer-grid> :nth-child(2),
+    .footer-grid> :nth-child(3) {
+        border-right: none;
     }
 
     .social-link {
@@ -1018,18 +1022,174 @@ hr {
         height: 50px;
     }
 
-    .footer-grid {
-        width: 60%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        border-top: none;
-        border-bottom: none;
+    .footer-icons {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    nav {
+        padding: 8px 15px;
     }
 
-    .footer-grid> :nth-child(1),
-    .footer-grid> :nth-child(2),
-    .footer-grid> :nth-child(3) {
-        border-right: none;
+    .burger span {
+        width: 25px;
+        height: 3px;
+    }
+
+    .nav-links {
+        top: 50px;
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        font-size: 18px;
+    }
+
+    nav img {
+        width: 80px;
+        height: 40px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .intro {
+        padding: 8px;
+    }
+
+    .intro h1,
+    .intro h2 {
+        font-size: 24px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .social-buttons a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-buttons img {
+        width: 55%;
+        height: 55%;
+    }
+
+    .photo-container {
+        margin-top: 30px;
+        width: 100%;
+        height: 80vh;
+        border-radius: 6px;
+    }
+
+    .photo {
+        width: 100%;
+        height: 90vh;
+        border-radius: 6px;
+    }
+
+    .container,
+    .container__about-me {
+        padding: 10px;
+
+    }
+
+    .about_me h2,
+    .about_projects h3,
+    .about_achievements h3,
+    .about_skills h3,
+    .footer-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .about_me p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .projects-container,
+    .achievements-container {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .cards {
+        height: 200px;
+    }
+
+    .cards-fone {
+        padding: 10px;
+    }
+
+    .project-item-box p {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    .Technical_bars {
+        max-width: 100%;
+    }
+
+    .bar {
+        gap: 15px;
+    }
+
+    .progress_bar {
+        height: 12px;
+        margin-top: 15px;
+    }
+
+    .footer-box {
+        padding: 30px 15px;
+    }
+
+    .footer-content {
+        gap: 15px;
+    }
+
+    .contact-link {
+        font-size: 18px;
+        gap: 10px;
+    }
+
+    .contact-icon {
+        font-size: 20px;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .form-textarea {
+        min-height: 100px;
+    }
+
+    .footer-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        border: none;
+    }
+
+    .social-link {
+        width: 45px;
+        height: 45px;
+    }
+
+    .footer-icons {
+        width: 25px;
+        height: 25px;
     }
 }
