@@ -256,7 +256,6 @@ hr {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #ffffff;
     transition: transform 0.3s ease;
 }
 
@@ -266,8 +265,7 @@ hr {
 }
 
 .photo img {
-    width: 100%;
-    height: 100%;
+
     object-fit: cover;
     border-radius: inherit;
 }
