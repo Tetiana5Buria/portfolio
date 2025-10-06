@@ -284,6 +284,11 @@ hr {
     gap: 20px;
 }
 
+.about_me p {
+    align-self: flex-start;
+    padding-left: 10px;
+}
+
 .about_me h2,
 .about_projects h3,
 .about_achievements h3,
