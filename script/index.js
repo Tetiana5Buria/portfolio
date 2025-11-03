@@ -56,3 +56,24 @@ window.addEventListener("scroll", function () {
     window.removeEventListener("scroll", arguments.callee);
   }
 });
+/* send post message */
+(function () {
+  emailjs.init("iymrFX53cs5dib4QY");
+})();
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs
+    .sendForm("service_b3hoh2p", "template_r6zwxld", this)
+    .then(() => {
+      alert("✅ Message sent successfully!");
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      alert("❌ Failed to send message: " + error.text);
+    });
+});
