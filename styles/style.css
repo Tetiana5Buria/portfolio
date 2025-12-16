@@ -1060,11 +1060,19 @@ hr {
 
 
     .cards-fone {
-        padding: 15px;
+        padding: 2px;
+    }
+
+    .about_projects,
+    .about_achievements {
+        margin: 2px auto;
+        padding: none;
+        background: linear-gradient(135deg, var(--bg-main), var(--bg-secondary));
+        box-shadow: 0 10px 20px var(--accent-soft);
     }
 
     .project-item-box p {
-        width: 70%;
+
         font-size: 14px;
     }
 
