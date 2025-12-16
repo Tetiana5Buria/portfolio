@@ -77,3 +77,20 @@ form.addEventListener("submit", function (e) {
       alert("❌ Failed to send message: " + error.text);
     });
 });
+
+/* carousel */
+document.querySelectorAll(".carousel-wrapper").forEach((wrapper) => {
+  const carousel = wrapper.querySelector(".carousel");
+  const next = wrapper.querySelector(".next");
+  const prev = wrapper.querySelector(".prev");
+
+  const scrollAmount = () => carousel.clientWidth * 0.5;
+
+  next.addEventListener("click", () => {
+    carousel.scrollBy({ left: scrollAmount(), behavior: "smooth" });
+  });
+
+  prev.addEventListener("click", () => {
+    carousel.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
+  });
+});
