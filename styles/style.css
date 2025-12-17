@@ -419,13 +419,6 @@ hr {
 
 
 
-.cards img {
-    position: relative;
-    z-index: 2;
-}
-
-
-
 .achievements-container,
 .projects-container {
     display: flex;
@@ -439,7 +432,7 @@ hr {
 .cards {
     aspect-ratio: 4 / 3;
     border-radius: 1.25rem;
-    padding: 1rem;
+    padding: 0.5rem;
 
     background: linear-gradient(135deg,
             var(--accent-soft),
@@ -517,10 +510,9 @@ hr {
     padding-inline: 1rem;
 }
 
-/* === Items === */
 .achievement-item,
 .project-item-box {
-    flex: 0 0 clamp(50rem, 50vw, 38rem);
+    flex: 0 0 clamp(50%, 50vw, 40rem);
     scroll-snap-align: start;
     border-radius: 1.5rem;
     padding: 1.5rem;
@@ -534,7 +526,6 @@ hr {
     box-shadow: var(--shadow-hover);
 }
 
-/* === Navigation buttons === */
 .carousel-btn {
     background: none;
     border: 2px solid var(--accent-main);
@@ -580,6 +571,38 @@ hr {
 
 .project_btn:hover {
     box-shadow: 0 0 10px var(--accent-main), 0 0 20px var(--accent-main), 0 0 30px var(--accent-main), 0 0 40px var(--accent-main);
+}
+
+.carousel-thumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.thumb {
+    width: 60px;
+    height: 40px;
+    border-radius: 0.5rem;
+    background: var(--accent-soft);
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumb:hover {
+    transform: scale(1.1);
+    border-color: var(--accent-main);
+}
+
+.thumb:focus-visible {
+    outline: 1px solid var(--accent-main);
 }
 
 
@@ -1025,38 +1048,16 @@ hr {
         display: none;
     }
 
-    /*
-    .carousel-track {
-        display: flex;
-        gap: 0.2rem;
-        padding-inline: 0.2rem;
+    .carousel-thumbs {
+        overflow-x: auto;
+        justify-content: center;
+    }
+
+    .thumb {
+        flex: 0 0 auto;
     }
 
 
-    .carousel-btn {
-        background: none;
-        border: none;
-        color: var(--accent-main);
-        font-size: 1rem;
-        cursor: pointer;
-        padding: none;
-        border-radius: 30%;
-        transition: all 0.3s ease;
-    }
-
-    .carousel-btn:hover {
-        background: var(--accent-main);
-        color: #000;
-    }
-
-    .carousel-btn.prev {
-        margin-right: 0.1rem;
-    }
-
-    .carousel-btn.next {
-        margin-left: 0.1rem;
-    }
- */
 
 
     .cards-fone {
@@ -1066,13 +1067,12 @@ hr {
     .about_projects,
     .about_achievements {
         margin: 2px auto;
-        padding: none;
+        padding: 0px;
         background: linear-gradient(135deg, var(--bg-main), var(--bg-secondary));
         box-shadow: 0 10px 20px var(--accent-soft);
     }
 
     .project-item-box p {
-
         font-size: 14px;
     }
 
@@ -1243,9 +1243,7 @@ hr {
         height: 200px;
     } */
 
-    .cards-fone {
-        padding: 10px;
-    }
+
 
     .project-item-box p {
         width: 90%;
