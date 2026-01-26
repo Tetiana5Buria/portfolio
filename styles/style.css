@@ -143,7 +143,7 @@ hr::after {
     height: 80vh;
     overflow: hidden;
     display: flex;
-    padding: clamp(20px, 5vw, 100px);
+    padding: clamp(5px, 5vw, 100px);
     align-items: center;
     justify-content: space-between;
 
@@ -930,11 +930,7 @@ hr::after {
         width: 100%;
     }
 
-    .container {
 
-        padding: 20px 50px;
-
-    }
 }
 
 @media (max-width: 1024px) {
@@ -1099,7 +1095,7 @@ hr::after {
 
 
 
-    .container,
+
     .container__about-me {
         padding: 15px;
         gap: 20px;
@@ -1300,6 +1296,13 @@ hr::after {
 @media (max-width: 460px) {
     body {
         padding: 10px 10px;
+
+    }
+
+    .container {
+
+
+        align-items: start;
 
     }
 }
