@@ -2,7 +2,7 @@
     --bg-main: #ffffff;
     --bg-secondary: #faf7f9;
     --bg-card: #ffffff;
-    --accent-main: rgba(92, 0, 30, 1);
+    --accent-main: #8B1E3F;
     --accent-soft: rgba(123, 30, 58, 0.12);
     --accent-strong: rgba(123, 30, 58, 0.6);
     --text-main: #1c1c1c;
@@ -31,8 +31,7 @@ html {
 }
 
 body {
-    padding: 30px 80px;
-    background-color: var(--accent-main);
+
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
@@ -50,7 +49,7 @@ span {
 .burger span {
     display: block;
     height: 3px;
-    background: var(--accent-main);
+    background: var(--accent-strong);
     border-radius: 5px;
 }
 
@@ -62,7 +61,7 @@ nav {
     box-shadow: var(--shadow-hover);
     position: sticky;
     top: 0;
-    background: linear-gradient(135deg, var(--bg-main), var(--bg-secondary));
+    background: linear-gradient(135deg, var(--accent-main));
     z-index: 100;
 }
 
@@ -75,7 +74,8 @@ nav {
 
 .nav-links li a {
     text-decoration: none;
-    color: var(--accent-main);
+    color: var(--bg-secondary);
+    ;
     font-weight: 600;
     padding: 8px 15px;
     transition: all 0.3s ease;
@@ -104,7 +104,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--accent-main);
+    color: var(--accent-strong);
     box-shadow: var(--shadow-hover);
 }
 
@@ -1029,7 +1029,7 @@ hr::after {
     .burger span {
         width: 30px;
         height: 4px;
-        background: var(--accent-main);
+        background: var(--bg-secondary);
         border-radius: 3px;
     }
 
@@ -1055,7 +1055,15 @@ hr::after {
         top: 60px;
         left: 0;
         width: 100%;
-        background: linear-gradient(135deg, var(--bg-main), var(--bg-secondary));
+        background: linear-gradient(135deg,
+                rgba(122, 30, 58, 0.25), rgba(246, 242, 243, 0.1));
+
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 16px;
+        border: 1px solid rgba(122, 30, 58, 0.3);
+
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
