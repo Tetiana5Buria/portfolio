@@ -547,7 +547,7 @@ hr::after {
 
 .achievement-item,
 .project-item-box {
-    border: 7px solid var(--accent-main);
+    border: 3px solid var(--accent-main);
     flex: 0 0 calc(100% / 3);
     scroll-snap-align: start;
     text-align: center;
@@ -1101,7 +1101,7 @@ hr::after {
     .achievement-item,
     .project-item-box {
         flex: 0 0 clamp(100%, 50vw, 38rem);
-
+        border: none;
     }
 
 
