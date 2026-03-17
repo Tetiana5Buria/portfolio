@@ -1187,10 +1187,7 @@ hr::after {
 
 
 @media (max-width: 640px) {
-    body {
-        padding: 10px 20px;
 
-    }
 
     nav {
         padding: 8px 15px;
@@ -1280,10 +1277,7 @@ hr::after {
 }
 
 @media (max-width: 460px) {
-    body {
-        padding: 10px 10px;
 
-    }
 
     .container {
 
